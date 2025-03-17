@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Coal Transport</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/images/logo.png" alt="Logo" class="logo">
+                <h2>User Panel</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#shipments" class="nav-item active">
+                    <i class="icon-shipments"></i>
+                    My Shipments
+                </a>
+                <a href="#tracking" class="nav-item">
+                    <i class="icon-tracking"></i>
+                    Track Shipment
+                </a>
+                <a href="#history" class="nav-item">
+                    <i class="icon-history"></i>
+                    History
+                </a>
+                <a href="#support" class="nav-item">
+                    <i class="icon-support"></i>
+                    Support
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Track your shipment..." class="search-input">
+                    <button class="search-btn">Track</button>
+                </div>
+                <div class="user-actions">
+                    <button class="notification-btn">
+                        <i class="icon-notification"></i>
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="/assets/images/user-avatar.png" alt="User">
+                        <span>User</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="user-dashboard">
+                <div class="active-shipments">
+                    <h2>Active Shipments</h2>
+                    <div class="shipment-cards">
+                        <!-- Active shipment cards will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="shipment-history">
+                    <h2>Recent History</h2>
+                    <div class="history-table">
+                        <!-- Shipment history will be listed here -->
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="action-buttons">
+                        <button class="action-btn">New Shipment</button>
+                        <button class="action-btn">Download Report</button>
+                        <button class="action-btn">Contact Support</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/user-dashboard.js"></script>
+</body>
+</html> 

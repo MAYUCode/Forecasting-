@@ -1,0 +1,45 @@
+.drill-down-container {
+    position: relative;
+}
+
+.drill-back-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.breadcrumb {
+    padding: 0.5rem 1rem;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-item {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.breadcrumb-item.active {
+    color: #666;
+    cursor: default;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.5rem;
+    color: #666;
+}
+
+.chart-container {
+    cursor: pointer;
+}
+
+.chart-container:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+} 

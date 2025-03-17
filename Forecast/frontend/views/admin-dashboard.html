@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Coal Transport</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/images/logo.png" alt="Logo" class="logo">
+                <h2>Admin Panel</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active">
+                    <i class="icon-dashboard"></i>
+                    Overview
+                </a>
+                <a href="#users" class="nav-item">
+                    <i class="icon-users"></i>
+                    User Management
+                </a>
+                <a href="#operators" class="nav-item">
+                    <i class="icon-operators"></i>
+                    Operator Management
+                </a>
+                <a href="#routes" class="nav-item">
+                    <i class="icon-routes"></i>
+                    Route Management
+                </a>
+                <a href="#analytics" class="nav-item">
+                    <i class="icon-analytics"></i>
+                    Advanced Analytics
+                </a>
+                <a href="#settings" class="nav-item">
+                    <i class="icon-settings"></i>
+                    System Settings
+                </a>
+                <a href="#logs" class="nav-item">
+                    <i class="icon-logs"></i>
+                    System Logs
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="admin-controls">
+                    <button class="emergency-btn">Emergency Override</button>
+                    <button class="system-status-btn">System Status</button>
+                </div>
+                <div class="admin-actions">
+                    <button class="notification-btn">
+                        <i class="icon-notification"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="admin-profile">
+                        <img src="/assets/images/admin-avatar.png" alt="Admin">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="admin-overview">
+                <div class="system-metrics">
+                    <h2>System Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h3>Active Users</h3>
+                            <div class="metric-value">245</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Active Operators</h3>
+                            <div class="metric-value">12</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Active Routes</h3>
+                            <div class="metric-value">28</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>System Load</h3>
+                            <div class="metric-value">65%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-actions-panel">
+                    <h2>Quick Actions</h2>
+                    <div class="action-buttons">
+                        <button class="action-btn">Add New User</button>
+                        <button class="action-btn">Add New Operator</button>
+                        <button class="action-btn">Configure Routes</button>
+                        <button class="action-btn">System Backup</button>
+                    </div>
+                </div>
+
+                <div class="admin-charts">
+                    <div class="chart-container">
+                        <h3>System Performance</h3>
+                        <canvas id="systemPerformanceChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>User Activity</h3>
+                        <canvas id="userActivityChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="recent-logs">
+                    <h2>Recent System Logs</h2>
+                    <div class="logs-table">
+                        <!-- Logs will be dynamically populated -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/admin-dashboard.js"></script>
+    <script src="/js/charts.js"></script>
+</body>
+</html> 

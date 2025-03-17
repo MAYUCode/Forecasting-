@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Coal Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body background="coal-train.jpg">
+    <div class="auth-container">
+        <div class="auth-forms">
+            <!-- Login Form -->
+            <form id="loginForm" class="active">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" style="color:black;">Login</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></zp>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm">
+                <h2>Register</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <select required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="operator">Sliding Operator</option>
+                    <option value="user">User</option>
+                </select>
+                <button type="submit" style="color: black;">Register</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html> 

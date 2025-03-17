@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Dashboard - Coal Transport</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/operator.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/images/logo.png" alt="Logo" class="logo">
+                <h2>Operator Panel</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#active-routes" class="nav-item active">
+                    <i class="icon-routes"></i>
+                    Active Routes
+                </a>
+                <a href="#schedule" class="nav-item">
+                    <i class="icon-schedule"></i>
+                    Schedule
+                </a>
+                <a href="#vehicles" class="nav-item">
+                    <i class="icon-vehicles"></i>
+                    Vehicles
+                </a>
+                <a href="#maintenance" class="nav-item">
+                    <i class="icon-maintenance"></i>
+                    Maintenance
+                </a>
+                <a href="#reports" class="nav-item">
+                    <i class="icon-reports"></i>
+                    Reports
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="operator-status">
+                    <span class="status-indicator active">On Duty</span>
+                    <button class="status-toggle">Change Status</button>
+                </div>
+                <div class="operator-actions">
+                    <button class="alert-btn">
+                        <i class="icon-alert"></i>
+                        Report Issue
+                    </button>
+                    <div class="operator-profile">
+                        <img src="/assets/images/operator-avatar.png" alt="Operator">
+                        <span>Operator</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="operator-dashboard">
+                <div class="active-routes">
+                    <h2>Active Routes</h2>
+                    <div class="routes-map">
+                        <!-- Interactive map will be rendered here -->
+                    </div>
+                    <div class="route-list">
+                        <!-- Active routes will be listed here -->
+                    </div>
+                </div>
+
+                <div class="vehicle-status">
+                    <h2>Vehicle Status</h2>
+                    <div class="vehicle-grid">
+                        <!-- Vehicle status cards will be displayed here -->
+                    </div>
+                </div>
+
+                <div class="maintenance-alerts">
+                    <h2>Maintenance Alerts</h2>
+                    <div class="alerts-list">
+                        <!-- Maintenance alerts will be shown here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/js/operator-dashboard.js"></script>
+    <script src="/js/maps.js"></script>
+</body>
+</html> 

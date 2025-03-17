@@ -1,0 +1,188 @@
+/* Base responsive layout */
+:root {
+    --sidebar-width: 280px;
+    --sidebar-mobile-width: 100%;
+    --header-height: 60px;
+}
+
+/* Tablet (768px to 1024px) */
+@media screen and (max-width: 1024px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -100%;
+        width: 300px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        background: var(--bg-primary);
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .top-bar-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .date-filter {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .date-btn {
+        flex: 1;
+        min-width: calc(50% - 0.5rem);
+    }
+
+    .notifications-panel {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .chart-card {
+        overflow-x: auto;
+    }
+
+    .activity-list {
+        margin-top: 1rem;
+    }
+
+    .activity-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media screen and (max-width: 480px) {
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .chart-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .user-info {
+        display: none;
+    }
+
+    .notification-badge {
+        right: 0;
+    }
+}
+
+/* Handle landscape orientation */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    .sidebar {
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        max-height: 80vh;
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar,
+    .top-bar,
+    .notifications-panel,
+    .action-btn,
+    .chart-actions {
+        display: none;
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .chart-card {
+        break-inside: avoid;
+    }
+}
+
+/* High-DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .avatar {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0a0;
+        --border-color: #404040;
+    }
+
+    .chart-card,
+    .stat-card {
+        background: var(--bg-secondary);
+    }
+
+    .search-input {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+} 

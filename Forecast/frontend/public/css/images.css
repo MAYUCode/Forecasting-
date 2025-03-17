@@ -1,0 +1,85 @@
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.stat-image {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.empty-state-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+.status-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.vehicle-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.pattern-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.illustration {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 2rem 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive image handling */
+@media (max-width: 768px) {
+    .illustration {
+        max-width: 200px;
+    }
+
+    .empty-state-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* High DPI screen support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .stat-image,
+    .vehicle-image {
+        image-rendering: -webkit-optimize-contrast;
+    }
+} 

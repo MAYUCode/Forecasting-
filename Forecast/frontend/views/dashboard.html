@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Coal Transport Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="/assets/images/logo.png" alt="Coal Transport Logo" class="logo">
+                <h2>Coal Transport</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active">
+                    <i class="icon-dashboard"></i>
+                    Overview
+                </a>
+                <a href="#tracking" class="nav-item">
+                    <i class="icon-tracking"></i>
+                    Live Tracking
+                </a>
+                <a href="#schedules" class="nav-item">
+                    <i class="icon-schedule"></i>
+                    Schedules
+                </a>
+                <a href="#analytics" class="nav-item">
+                    <i class="icon-analytics"></i>
+                    Analytics
+                </a>
+                <a href="#reports" class="nav-item">
+                    <i class="icon-reports"></i>
+                    Reports
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="/assets/images/user-avatar.jpg" alt="User" class="avatar">
+                    <div class="user-details">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <i class="icon-search"></i>
+                </div>
+                
+                <div class="top-bar-actions">
+                    <button class="notification-btn">
+                        <i class="icon-notification"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    
+                    <button class="action-btn">
+                        <i class="icon-plus"></i>
+                        New Schedule
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Overview -->
+            <section class="dashboard-overview">
+                <div class="overview-header">
+                    <h1>Dashboard Overview</h1>
+                    <div class="date-filter">
+                        <button class="date-btn active">Today</button>
+                        <button class="date-btn">Week</button>
+                        <button class="date-btn">Month</button>
+                        <button class="date-btn custom">Custom Range</button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <img src="/assets/images/vehicles/truck.png" alt="Delivery Vehicle" class="stat-image">
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Deliveries</h3>
+                            <div class="stat-value">
+                                <span class="number">1,234</span>
+                                <span class="trend positive">
+                                    <i class="icon-trend-up"></i>
+                                    8.5%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More stat cards... -->
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Delivery Performance</h3>
+                            <div class="chart-actions">
+                                <button class="chart-filter-btn">Filter</button>
+                                <button class="chart-export-btn">Export</button>
+                            </div>
+                        </div>
+                        <div class="chart" id="deliveryChart"></div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Volume Analysis</h3>
+                            <div class="chart-actions">
+                                <button class="chart-filter-btn">Filter</button>
+                                <button class="chart-export-btn">Export</button>
+                            </div>
+                        </div>
+                        <div class="chart" id="volumeChart"></div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <!-- Activity items will be dynamically added here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Notifications Panel -->
+        <aside class="notifications-panel" id="notificationsPanel">
+            <div class="panel-header">
+                <h3>Notifications</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="notifications-list">
+                <!-- Notifications will be dynamically added here -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script src="/js/charts.js"></script>
+    <script src="/js/notifications.js"></script>
+</body>
+</html> 
